@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
+    <title>School Nb</title>
+</head>
+<body>
+
+    <header>
+        <nav class="menuDesktop container">
+            <a class="menuDesktop__Logo" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo da escola Nhonhô Braga" /><!--menuDesktop__Logo-->
+            </a><!--menuDesktop__Logo-->
+
+            <ul>
+                <li><a class="menuDesktop__link" href="#">Sobre</a></li>
+                <li><a class="menuDesktop__link" href="#">Trabalhos</a></li>
+                <li><a class="menuDesktop__link" href="#">Sala de Leitura</a></li>
+            </ul>
+        </nav><!--menuDesktop-->
+    </header>
+
+    <section class="birthday">
+        <div class="birthday__loading"></div><!--birthday__loading-->
+
+        <div class="countdown container">
+            <div class="countdown__time">
+                <h2 id="days">00</h2>
+                <span>dias</span>
+            </div><!--countdown__time-->
+            <div class="countdown__time">
+              <h2 id="hours">00</h2>
+              <span>horas</span>
+            </div><!--countdown__time-->
+            <div class="countdown__time">
+              <h2 id="minutes">00</h2>
+              <span>minutos</span>
+            </div><!--countdown__time-->
+            <div class="countdown__time">
+              <h2 id="seconds">00</h2>
+              <span>segundos</span>
+            </div><!--countdown__time-->
+        </div><!--countdown-->
+
+        <canvas id="confettiAnimate"></canvas>
+    </section><!--birthday-->
+    
+    <script src="./js/countdown.js" type="module"></script>
+</body>
+</html>
