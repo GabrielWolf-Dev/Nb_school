@@ -8,9 +8,11 @@ const countdownContainer = document.querySelector('.countdown');
 const loading = document.querySelector('.birthday__loading');
 const confettiCanvas = document.querySelector('#confettiAnimate');
 
+const currentday = new Date().getDate();
+const dayAniversary = 22;
+
+// Confetti Animation:
 const confettiAnimate = () => {
-    const currentday = new Date().getDate();
-    const dayAniversary = 22;
 
     if(currentday === dayAniversary){
         confettiCanvas.style.display = 'block';
@@ -27,7 +29,7 @@ const confettiAnimate = () => {
     }
 };
 
-// Countdown
+// Countdown:
 const getTimeUnit = unit => unit < 10 ? '0' + unit : unit;
 
 const insertCountdownValues = ({ days, hours, minutes, seconds }) => {
@@ -38,8 +40,6 @@ const insertCountdownValues = ({ days, hours, minutes, seconds }) => {
 };
 
 const updateCountdown = () => {
-    const currentday = new Date().getDate();
-    const dayAniversary = 22;
     let year = new Date().getFullYear();
 
     if(currentday >= dayAniversary){
@@ -62,5 +62,6 @@ const countdownDisplay = () => {
     loading.classList.remove('birthday__loading');
 };
 
+// Call Functions:
 setInterval(updateCountdown, 1000);
 confettiAnimate();
