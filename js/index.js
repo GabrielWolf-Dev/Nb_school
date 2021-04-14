@@ -1,4 +1,6 @@
 import ConfettiGenerator from './confetti.js';
+import linksListeners from './smoothScroll.js';
+import menuMobile from './menuMobile.js';
 
 const daysContainer = document.querySelector('#days');
 const hoursContainer = document.querySelector('#hours');
@@ -7,23 +9,32 @@ const secondsContainer = document.querySelector('#seconds');
 const countdownContainer = document.querySelector('.countdown');
 const loading = document.querySelector('.birthday__loading');
 const confettiCanvas = document.querySelector('#confettiAnimate');
+const phaseBirthday = document.querySelector('#phaseBirthday');
+const confettiContainer = document.querySelector('.confetti');
 
 const currentday = new Date().getDate();
-const dayAniversary = 22;
+const dayAniversary = 22; //22
 
 // Confetti Animation:
 const confettiAnimate = () => {
+    const currentYear = new Date().getFullYear();
+    const yearBirthday = '1935';
+    const currentMonth = new Date().getMonth() + 1;
+    const monthBirthday = 4;
+    const age = currentYear - yearBirthday;
 
-    if(currentday === dayAniversary){
+    if(currentday === dayAniversary && currentMonth === monthBirthday){
         confettiCanvas.style.display = 'block';
+        confettiContainer.style.display = 'block';
         loading.classList.remove('birthday__loading');
+        phaseBirthday.textContent = `${age} anos formando alunos protagonistas`;
 
-        let confettiSettings = { 
+        let confettiSettings = {
             target: confettiCanvas,
         };
         let confetti = new ConfettiGenerator(confettiSettings);
         confetti.render();
-    }else {
+    } else {
         confettiCanvas.style.display = 'none';
         setTimeout(countdownDisplay, 1000);
     }
@@ -65,3 +76,5 @@ const countdownDisplay = () => {
 // Call Functions:
 setInterval(updateCountdown, 1000);
 confettiAnimate();
+linksListeners();
+menuMobile();

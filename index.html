@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" content="Nb school">
+    <meta name="description" content="Website de comemoração ao aniversário da escola Coronel Nhonhô Braga">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gabrielwolf-dev.github.io/Nb_school/">
+    <meta property="og:title" content="Nb school">
+    <meta property="og:description" content="Website de comemoração ao aniversário da escola Coronel Nhonhô Braga">
+    <meta property="og:image" content="https://github.com/GabrielWolf-Dev/Nb_school/blob/main/assets/img/seo_img.png?raw=true">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gabrielwolf-dev.github.io/Nb_school/">
+    <meta property="twitter:title" content="Nb school">
+    <meta property="twitter:description" content="Website de comemoração ao aniversário da escola Coronel Nhonhô Braga">
+    <meta property="twitter:image" content="https://github.com/GabrielWolf-Dev/Nb_school/blob/main/assets/img/seo_img.png?raw=true">
+
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
-    <title>School Nb</title>
+    <title>Nb school</title>
 </head>
 <body>
 
@@ -19,11 +37,27 @@
             </a><!--menuDesktop__Logo-->
 
             <ul>
-                <li><a class="menuDesktop__link" href="#">Sobre</a></li>
-                <li><a class="menuDesktop__link" href="#">Trabalhos</a></li>
-                <li><a class="menuDesktop__link" href="#">Sala de Leitura</a></li>
+                <li><a class="menuDesktop__link" href="#Sobre">Sobre</a></li>
+                <li><a class="menuDesktop__link" href="#Works">Trabalhos</a></li>
+                <li><a class="menuDesktop__link" href="#Leitura">Sala de Leitura</a></li>
             </ul>
         </nav><!--menuDesktop-->
+
+        <nav class="menuMobile container">
+            <a class="menuMobile__Logo" href="index.html">
+                <img src="assets/img/logo.png" alt="Logo da escola Nhonhô Braga" /><!--menuDesktop__Logo-->
+            </a><!--menuMobile__Logo-->
+
+            <button class="menuMobile__btn">
+                <i class="fas fa-bars"></i>
+            </button><!--menuMobile__btn-->
+
+            <ul class="menuMobile__navLinks">
+                <li><a class="menuMobile__link" href="#Sobre">Sobre</a></li>
+                <li><a class="menuMobile__link" href="#Works">Trabalhos</a></li>
+                <li><a class="menuMobile__link" href="#Leitura">Sala de Leitura</a></li>
+            </ul><!--menuMobile__navLinks-->
+        </nav><!--menuMobile-->
     </header>
 
     <section class="birthday">
@@ -48,12 +82,18 @@
             </div><!--countdown__time-->
         </div><!--countdown-->
 
-        <canvas id="confettiAnimate"></canvas>
+        <div class="confetti">
+            <canvas id="confettiAnimate"></canvas>
+            <aside class="confetti__content">
+                <h2 class="title">Feliz aniversário!</h2>
+                <h3 class="subtitle" id="phaseBirthday"></h3>
+            </aside><!--confetti__content-->
+        </div><!--confetti-->
     </section><!--birthday-->
 
     <div class="bgblurEffect"></div><!--bgblurEffect-->
 
-    <main class="container">
+    <main id="Sobre" class="container">
         <section class="banner">
             <img class="banner__img" src="./assets/img/nbImg.png" alt="Logo do Nhonhô Braga" />
             <h1 class="title">Nhonhô Braga</h1>
@@ -77,17 +117,20 @@
             </div><!--pei__content-->
         </section><!--pei-->
 
-        <section class="works container">
+        <section id="Works" class="works container">
             <figure>
                 <img class="works__draw" src="./assets/img/draw.png" alt="Desenho sobre profissões" />
-                <figcaption class="subContent">Luana</figcaption>
+                <figcaption class="subContent">
+                    <a target="_blank" href="https://www.facebook.com/mrs.loserqueen/">Luana</a>
+                    3ºA
+                </figcaption>
             </figure><!--works__draw-->
         </section><!--works-->
     </main><!--container-->
 
     <hr class="container bar"><!--bar-->
 
-    <section class="readingRoom container">
+    <section id="Leitura" class="readingRoom container">
         <iframe class="readingRoom__video video" src="https://www.youtube.com/embed/rl51ud7Etvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
         <div class="readingRoom__description">
@@ -107,12 +150,12 @@
             <figcaption class="subContent">Vetor de <a target="_blank" class="motivation__link" href="https://undraw.co/search">undraw</a></figcaption>
         </figure>
 
-        <div class="phrase">
+        <div class="motivation__phrase">
             <h3 class="content">
                 Uma pessoa que nunca cometeu um erro, nunca tentou nada de novo.
             </h3>
             <p class="subContent">Albert Einstein</p>
-        </div><!--phrase-->
+        </div><!--motivation__phrase-->
     </section><!--motivation-->
     
     <script src="./js/index.js" type="module"></script>
