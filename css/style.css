@@ -114,6 +114,7 @@ header {
     padding: 16px 2%;
     transition: all ease 0.3s;
     opacity: 0;
+    z-index: 2;
 }
 
 .menuMobile__navLinks li {
