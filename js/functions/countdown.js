@@ -1,4 +1,4 @@
-import ConfettiGenerator from './confetti.js';
+import ConfettiGenerator from '../libraries/confetti.js';
 
 export default function countdown () {
     // Variables:

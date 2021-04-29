@@ -65,12 +65,17 @@ ul {
     border: 3px solid var(--color-green);
 }
 
-.bar {
+.bar, .bar--black {
     width: 100%;
     border: 2px solid var(--color-green);
     border-radius: 50%;
     box-shadow: 0 0 20px var(--color-green);
     margin: 48px auto;
+}
+
+.bar--black {
+    border: 2px solid var(--color-black);
+    box-shadow: none;
 }
 
 header {
@@ -85,7 +90,7 @@ header {
     align-items: center;
 }
 
-.menuDesktop__Logo, .menuMobile__Logo {
+.menuDesktop__Logo, .menuMobile__Logo, .menu--works__logo {
     width: 100%;
     max-width: 42px;
     text-decoration: none;
@@ -274,27 +279,6 @@ main {
     padding: 16px 0;
 }
 
-.works {
-    width: 100%;
-    max-width: 800px;
-    padding: 48px 0;
-    text-align: left;
-}
-
-.works figcaption a {
-    color: var(--color-green);
-}
-
-.works__draw {
-    width: 100%;
-    height: 600px;
-    text-align: center;
-}
-
-.works__draw figcaption {
-    margin: 16px 4%;
-}
-
 .readingRoom {
     display: flex;
     justify-content: space-between;
@@ -361,6 +345,48 @@ main {
     text-align: right;
     padding: 16px 2%;
 }
+
+/*-- Page Works --*/
+
+.menu--works  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.works {
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 48px 0;
+}
+
+.works .container {
+    max-width: 800px;
+    text-align: left;
+}
+
+.works figcaption > h2 {
+    color: var(--color-black);
+    margin-top: 16px;
+}
+
+.works figcaption > p {
+    color: var(--color-blue);
+    margin: 8px 0;
+    font-style: italic;
+}
+
+.works__draw {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+
+.works__draw figcaption {
+    margin: 16px 4%;
+}
+
+/*-- Responsive --*/
 
 @media screen and (max-width: 936px) {
     .title {
