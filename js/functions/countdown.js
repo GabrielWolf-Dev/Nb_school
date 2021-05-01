@@ -14,13 +14,13 @@ export default function countdown () {
 
     const currentday = new Date().getDate();
     const dayAniversary = 22;
+    const monthBirthday = 4;
+    const currentMonth = new Date().getMonth() + 1;
 
     // Confetti Animation:
     const confettiAnimate = () => {
         const currentYear = new Date().getFullYear();
         const yearBirthday = '1935';
-        const currentMonth = new Date().getMonth() + 1;
-        const monthBirthday = 4;
         const age = currentYear - yearBirthday;
 
         if(currentday === dayAniversary && currentMonth === monthBirthday){
@@ -53,7 +53,7 @@ export default function countdown () {
     const updateCountdown = () => {
         let year = new Date().getFullYear();
 
-        if(currentday >= dayAniversary){
+        if(currentMonth > monthBirthday || currentMonth === monthBirthday && currentday > dayAniversary) {
             year =  new Date().getFullYear() + 1;
         }
 

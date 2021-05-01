@@ -20,7 +20,7 @@ ul {
 }
 
 .container {
-    max-width: 1280px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     padding: 0 2%;
@@ -76,6 +76,10 @@ ul {
 .bar--black {
     border: 2px solid var(--color-black);
     box-shadow: none;
+}
+
+.bar--black:last-child {
+    display: none;
 }
 
 header {
@@ -260,6 +264,13 @@ main {
     color: var(--color-green);
 }
 
+.curious__wraper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .curious__video {
     margin: 24px 0;
 }
@@ -358,6 +369,11 @@ main {
     width: 100%;
     background-color: var(--color-white);
     padding: 48px 0;
+    text-align: center;
+}
+
+.works__video {
+    padding: 24px 2% 48px 2%;
 }
 
 .works .container {
@@ -387,6 +403,13 @@ main {
 }
 
 /*-- Responsive --*/
+
+@media screen and (max-width: 1320px) {
+    .curious__wraper {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 
 @media screen and (max-width: 936px) {
     .title {
@@ -430,12 +453,18 @@ main {
         height: 220px;
     }
 
-    .works {
-        max-width: 600px;
+    #showWorks {
+        text-align: center;
     }
 
     .works__draw {
+        width: 80%;
         height: 450px;
+    }
+
+    .content {
+        margin-left: 10%;
+        text-align: left;
     }
 
     .readingRoom {
@@ -464,10 +493,6 @@ main {
     .menuMobile {
         display: flex;
     }
-    
-    .works {
-        max-width: 400px;
-    }
 
     .works__draw {
         height: 300px;
@@ -486,5 +511,24 @@ main {
 
     .countdown__time {
         margin: 16px 0;
+    }
+
+    .video {
+        height: 240px;
+    }
+
+    .works__draw {
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 368px) {
+    .video {
+        height: 220px;
+    }
+
+    .works__draw {
+        width: 80%;
+        height: 220px;
     }
 }

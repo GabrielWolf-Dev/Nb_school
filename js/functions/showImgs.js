@@ -56,8 +56,14 @@ srcWorks.forEach((works) => {
         <figure>
             <img class="works__draw" src="${works.work}" alt="Trabalho de " />
             <figcaption class="content">
-                <h2 class="subtitle">Integrantes:</h2><!--subtitle-->
-                <p>${works.authors}</p>
+                ${
+                    works.authors == "Indefinido"
+                    ? ''
+                    : `
+                        <h2 class="subtitle">Integrantes:</h2><!--subtitle-->
+                        <p>${works.authors}</p>
+                    `
+                }
             </figcaption>
         </figure><!--works__draw-->
         <hr class="container bar--black"><!--bar-->
