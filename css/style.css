@@ -462,7 +462,7 @@ main {
         height: 450px;
     }
 
-    .content {
+    #showWorks .content {
         margin-left: 10%;
         text-align: left;
     }
