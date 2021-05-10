@@ -1,5 +1,8 @@
 # Nb_scholl
  Projeto em comemoração do aniversário da escola Cel. Nhonhô Braga.
+ 
+ ![Efeito de confete da página](https://github.com/GabrielWolf-Dev/Nb_school/blob/main/assets/img/readme/confettiAnimate.png)
+ ![Curiosidades da Home Page](https://github.com/GabrielWolf-Dev/Nb_school/blob/main/assets/img/readme/curious-homePage.png)
 
 ## Objetivos:
 Este projeto tinha o foco de divulgar um pouco sobre a história da escola e comemorar o seu aniversário inserindo uma contagem regressiva e animação de confete feita em JavaScript com a biblioteca [confetti.js](https://github.com/Agezao/confetti-js).
@@ -30,3 +33,5 @@ Foi um projeto rápido, porém com vários conhecimentos novos adqueridos, desde
 - [x] Implementação da biblioteca [confetti.js](https://github.com/Agezao/confetti-js);
 - [x] Meta Tags para SEO em cada página.
 
+ ![Footer da Home Page](https://github.com/GabrielWolf-Dev/Nb_school/blob/main/assets/img/readme/footer-homePage.png)
+ ![Página Works](https://github.com/GabrielWolf-Dev/Nb_school/blob/main/assets/img/readme/worksPage.png)
