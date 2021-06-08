@@ -1,16 +1,18 @@
 import ConfettiGenerator from '../libraries/confetti.js';
 
 export default function countdown () {
+    const $ = document.querySelector.bind(document);
+
     // Variables:
-    const daysContainer = document.querySelector('#days');
-    const hoursContainer = document.querySelector('#hours');
-    const minutesContainer = document.querySelector('#minutes');
-    const secondsContainer = document.querySelector('#seconds');
-    const countdownContainer = document.querySelector('.countdown');
-    const loading = document.querySelector('.birthday__loading');
-    const confettiCanvas = document.querySelector('#confettiAnimate');
-    const phaseBirthday = document.querySelector('#phaseBirthday');
-    const confettiContainer = document.querySelector('.confetti');
+    const daysContainer = $('#days');
+    const hoursContainer = $('#hours');
+    const minutesContainer = $('#minutes');
+    const secondsContainer = $('#seconds');
+    const countdownContainer = $('.countdown');
+    const loading = $('.birthday__loading');
+    const confettiCanvas = $('#confettiAnimate');
+    const phaseBirthday = $('#phaseBirthday');
+    const confettiContainer = $('.confetti');
 
     const currentday = new Date().getDate();
     const dayAniversary = 22;
