@@ -21,4 +21,5 @@ fetch('https://raw.githubusercontent.com/GabrielWolf-Dev/Nb_school/main/api/db.j
             <hr class="container bar--black"><!--bar-->
         `;
     });
-});
+})
+.catch(error => console.log(error));
