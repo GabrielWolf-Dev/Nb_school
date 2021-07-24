@@ -4,7 +4,7 @@ fetch('https://raw.githubusercontent.com/GabrielWolf-Dev/Nb_school/main/api/db.j
 .then(response => response.json())
 .then(data => {
     data.forEach((works) => {
-        worksContainer.innerHTML += `
+        worksContainer.insertAdjacentHTML('beforeend', `
             <figure>
                 <img class="works__draw" src="${works.work}" alt="Trabalho de " />
                 <figcaption class="content">
@@ -19,7 +19,7 @@ fetch('https://raw.githubusercontent.com/GabrielWolf-Dev/Nb_school/main/api/db.j
                 </figcaption>
             </figure><!--works__draw-->
             <hr class="container bar--black"><!--bar-->
-        `;
+        `);
     });
 })
 .catch(error => console.log(error));
